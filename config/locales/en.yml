@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  help: "Help"
+  welcome: "Welcome"
+  system_name: "Book Reviewing System"
+  about: "About"
+  contact: "Contact"
+  login: "Login"
