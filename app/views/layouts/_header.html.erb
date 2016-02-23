@@ -1,10 +1,20 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
+  <div class="container">
     <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t(:home), "#" %></li>
-        <li><%= link_to t(:help), help_path %></li>
-        <li><%= link_to t(:login), "#" %></li>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to t(:home), root_path %></li>
+          <li><%= link_to t(:help), help_path %></li>
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to t(:sign_out), destroy_user_session_path, method: "delete" %>
+            </li>
+          <% else %>
+            <li><%= link_to t(:sign_in), new_user_session_path %></li>
+            <li><%= link_to t(:sign_up), new_user_registration_path %></li>
+          <% end %>
+        </div>
       </ul>
     </nav>
   </div>
