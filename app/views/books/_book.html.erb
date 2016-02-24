@@ -1,0 +1,9 @@
+<div class="col-md-3 col-sm-4 col-xs-6">
+  <% if book.image.present? %>
+    <%= link_to image_tag(book.image, size: Settings.books.size), book %>
+  <% else %>
+    <%= link_to image_tag(Settings.books.url, size: Settings.books.size), book %>
+  <% end %>
+  <h4><%= link_to book.title, "#" %></h4>
+  <p><%= book.author %></p>
+</div>
