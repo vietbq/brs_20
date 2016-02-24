@@ -28,4 +28,15 @@ en:
       create_user: "Create new user"
     book:
       create_book: "Create new book"
+    books:
+      table: 
+        id: "ID"
+        image: "Image"
+        title: "Title"
+        content: "Content"
+        author: "Author"
+        edit: "Edit"
+        delete: "Delete"
   submit: "Submit"
+  messages:
+    confirm: "Are you sure?"
