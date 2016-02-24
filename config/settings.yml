@@ -7,3 +7,17 @@ books:
   url: "/assets/anh1.jpg"
 book_form:
   description: 3
+activity:
+  trackable:
+    request: 
+      content: "requested a book "
+    review: 
+      content: "reviewed a book "
+    comment: 
+      content: "commented a review "
+    userbook: 
+      content: "marked a book "
+    like: 
+      content: "liked a activity "
+    favorite: 
+      content: "marked favorite a book "
