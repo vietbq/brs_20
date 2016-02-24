@@ -9,4 +9,6 @@ class Book < ActiveRecord::Base
   validates :content, presence: true, length: {minimum: 10}
   validates :author, presence: true
   validates :number_of_pages, numericality: {only_integer: true}
+
+  enum status: [:reading, :read]
 end

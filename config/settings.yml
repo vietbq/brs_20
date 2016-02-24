@@ -6,6 +6,8 @@ books:
   size: "150x150"
   url: "/assets/anh1.jpg"
   content: 50
+  detail_width: "100%"
+  avatar_width: "50%"
 book_form:
   description: 3
 activity:
