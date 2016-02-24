@@ -5,3 +5,5 @@ books:
   page: 15
   size: "150x150"
   url: "/assets/anh1.jpg"
+book_form:
+  description: 3
