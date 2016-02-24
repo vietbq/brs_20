@@ -21,7 +21,11 @@ en:
     admin:
       user:
         create_success: "New user has been created!"
+      book:
+        create_book: "New book has been created!"
   admin:
     user:
       create_user: "Create new user"
+    book:
+      create_book: "Create new book"
   submit: "Submit"

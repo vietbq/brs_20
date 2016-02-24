@@ -7,3 +7,9 @@
     image: "/assets/anh1.jpg",
     category_id: 1
 end
+10.times do |n|
+  name = "Category #{n+1}"
+  content = Faker::Lorem.paragraphs.first
+  Category.create!(name: name,
+    content: content)
+end
