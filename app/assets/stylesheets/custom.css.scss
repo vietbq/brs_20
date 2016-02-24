@@ -100,3 +100,15 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
+
+.alert {
+  list-style: none;
+}
+
+.alert-success {
+  border-left: 3px solid #00C040;
+}
+
+.alert-warning, .alert-danger, .alert-error {
+  border-left: 3px solid rgba(192, 35, 0, 0.79);
+}
