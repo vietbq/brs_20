@@ -37,3 +37,4 @@ en:
     password: "Password"
     password_confirm: "Password confirmation"
     email: "Email"
+  access_denied: "You don't have permission to do this action!"
