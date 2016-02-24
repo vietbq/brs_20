@@ -1,6 +1,10 @@
 class Admin::BooksController < ApplicationController
   load_and_authorize_resource
 
+  def index
+    @books = Book.paginate page: params[:page], per_page: Settings.books.page
+  end
+
   def new
     @categories = Category.all
   end
