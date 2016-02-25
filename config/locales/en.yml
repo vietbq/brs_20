@@ -18,6 +18,8 @@ en:
     email: "Email"
   access_denied: "You don't have permission to do this action!"
   flash:
+    user:
+      not_found_book: "This book is not exist"
     admin:
       user:
         create_success: "New user has been created!"
@@ -46,3 +48,11 @@ en:
   submit: "Submit"
   messages:
     confirm: "Are you sure?"
+  book:
+    header: "Books"
+    category: "Category"
+    by: "by "
+    description: "Description"
+    related: "Related Books"
+    review: "User Reviews"
+    reply: "Reply"
