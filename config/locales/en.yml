@@ -9,7 +9,9 @@ en:
   sign_ip: "Sign up"
   sign_out: "Sign out"
   user:
+    name: "User"
     edit: "Edit"
+    role: "Role"
     profile: "Profile"
     setting: "Setting"
     username: "Username"
@@ -26,6 +28,7 @@ en:
       book:
         create_book: "New book has been created!"
   admin:
+    name: "Admin"
     user:
       create_user: "Create new user"
     book:

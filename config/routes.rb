@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :books
   end
   resources :books
+  resources :users, only: [:show]
 end

@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
 
   def index
     get_activities
+  end
+  
+  def show
   end
 
   private

@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-9">
+    <div class="col-md-3">
+      <%= gravatar_for @user, size: Settings.avatar.size %>
+    </div>
+    <div class="col-md-6">
+      <h4><%= t "user.profile" %></h4>
+      <h5><%= t "user.username" %>: <%= @user.username %></h5>
+      <h5><%= t "user.email" %>: <%= @user.email %></h5>
+      <h5><%= t "user.role" %>:
+        <span class="label label-<%= @user.admin? ? 'danger' : 'success' %>">
+          <%= @user.admin? ? t("admin.name") : t("user.name") %>
+        </span>
+      </h5>
+    </div>
+  </div>
+</div>
