@@ -33,6 +33,7 @@ en:
       destroy-success: "Book deleted sucessfully"
       destroy-fail: "Book deleted fail"
       edit_book: "Edit Book"
+      submit: "Submit"
       cancel: "Cancel"
       table: 
         id: "ID"

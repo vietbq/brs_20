@@ -1,9 +1,10 @@
 class Admin::BooksController < ApplicationController
   load_and_authorize_resource
-  before_action :load_categories, only: [:new, :edit]
+  before_action :load_categories, only: [:new, :edit, :index]
 
   def index
-    @books = Book.paginate page: params[:page], per_page: Settings.books.page
+    @search = Book.search params[:q]
+    @books = @search.result(distinct: true).paginate page: params[:page], per_page: Settings.books.page
   end
 
   def new
