@@ -5,6 +5,7 @@ books:
   page: 15
   size: "150x150"
   url: "/assets/anh1.jpg"
+  content: 50
 book_form:
   description: 3
 activity:

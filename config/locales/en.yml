@@ -29,6 +29,11 @@ en:
     book:
       create_book: "Create new book"
     books:
+      updated_success: "Book updated sucessfully"
+      destroy-success: "Book deleted sucessfully"
+      destroy-fail: "Book deleted fail"
+      edit_book: "Edit Book"
+      cancel: "Cancel"
       table: 
         id: "ID"
         image: "Image"
