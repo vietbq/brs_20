@@ -25,12 +25,25 @@ en:
     admin:
       user:
         create_success: "New user has been created!"
+        destroy_success: "Destroy user successfully!"
+        destroy_fail: "Failed to destroy user!"
       book:
         create_book: "New book has been created!"
   admin:
     name: "Admin"
     user:
       create_user: "Create new user"
+      list_users: "List All Users"
+      username: "User Name :"
+      table:
+        id: "Id"
+        username: "User name"
+        email: "Email"
+        role: "Role"
+        created_at: "Created at"
+        edit: "Edit"
+        delete: "Delete"
+      search: "Search"
     book:
       create_book: "Create new book"
     books:
