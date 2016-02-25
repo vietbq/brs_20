@@ -10,6 +10,8 @@ books:
   avatar_width: "50%"
 book_form:
   description: 3
+avatar: 
+  size: 150
 activity:
   trackable:
     request: 
