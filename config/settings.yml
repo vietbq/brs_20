@@ -33,3 +33,5 @@ users:
   users_per_page: 15
 favorite:
   limit: 10
+reviews:
+  page: 6

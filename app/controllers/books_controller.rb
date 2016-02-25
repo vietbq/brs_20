@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource  except: :show
 
   def index
     @search = Book.search params[:q]
@@ -8,11 +8,15 @@ class BooksController < ApplicationController
   end
 
   def show
+    @book = Book.find_by id: params[:id]
     if @book.nil?
-      flash[:error] = t "flash.user.not_found_book"
-      redirect_to root_path
+      flash[:warning] = t "flash.user.not_found_book"
+      redirect_to books_path
     else
       load_reviews
+      @new_review = current_user.reviews.build
+      @reviews = @book.reviews.paginate page: params[:page],
+        per_page: Settings.reviews.page
     end
   end
 
