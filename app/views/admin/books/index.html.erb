@@ -21,12 +21,12 @@
           <% end %>
         </td>
         <td><%= link_to book.title, "#" %></td>
-        <td><%= book.content.truncate(50) %></td>
+        <td><%= book.content.truncate Settings.books.content %></td>
         <td><%= book.author %></td>
         <td>
-          <%= link_to t("admin.books.table.edit"), "#",
+          <%= link_to t("admin.books.table.edit"), edit_admin_book_path(book),
             class: "btn btn-primary" %>
-          <%= link_to t("admin.books.table.delete"), "#",
+          <%= link_to t("admin.books.table.delete"), admin_book_path(book),
             method: :delete, data: {confirm: t("messages.confirm")}, class: "btn btn-danger" %>
         </td>
       </tr>

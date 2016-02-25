@@ -1,0 +1,4 @@
+<h1><%= t "admin.book.edit_book" %></h1>
+<%= form_for [:admin, @book] do |f| %>
+  <%= render "form", f: f %>
+<% end %>

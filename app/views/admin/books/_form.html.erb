@@ -31,5 +31,6 @@
       <%= f.collection_select :category_id, @categories, :id, :name %>
     </div><br>
     <%= f.submit t(:submit), class: "btn btn-primary" %>
+    <%= link_to t("admin.books.cancel"), admin_books_path  %>
   </div>
 </div>
