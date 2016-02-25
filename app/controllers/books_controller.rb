@@ -2,7 +2,9 @@ class BooksController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @books = Book.paginate page: params[:page], per_page: Settings.books.page
+    @search = Book.search params[:q]
+    @books = @search.result(distinct: true).paginate page: params[:page],
+      per_page: Settings.books.page
   end
 
   def show

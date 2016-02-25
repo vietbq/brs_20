@@ -11,4 +11,10 @@ class Book < ActiveRecord::Base
   validates :number_of_pages, numericality: {only_integer: true}
 
   enum status: [:reading, :read]
+
+  class << self
+    def ransackable_attributes auth_object = nil
+      super & ["title", "author"]
+    end
+  end
 end

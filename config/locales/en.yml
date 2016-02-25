@@ -37,7 +37,7 @@ en:
       edit_book: "Edit Book"
       submit: "Submit"
       cancel: "Cancel"
-      table: 
+      table:
         id: "ID"
         image: "Image"
         title: "Title"
@@ -56,3 +56,6 @@ en:
     related: "Related Books"
     review: "User Reviews"
     reply: "Reply"
+  add_field_search: "Add Search"
+  search: "Search"
+  remove: "Remove"
