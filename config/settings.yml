@@ -14,15 +14,17 @@ avatar:
   size: 150
 activity:
   trackable:
-    request: 
+    request:
       content: "requested a book "
-    review: 
+    review:
       content: "reviewed a book "
-    comment: 
+    comment:
       content: "commented a review "
-    userbook: 
+    userbook:
       content: "marked a book "
-    like: 
+    like:
       content: "liked a activity "
-    favorite: 
+    favorite:
       content: "marked favorite a book "
+users:
+  users_per_page: 15
