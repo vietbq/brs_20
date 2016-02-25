@@ -16,6 +16,12 @@ section {
   overflow: auto;
 }
 
+select {
+  width:250px;
+  padding:8px;
+  background-color:#FFFFFF;
+}
+
 textarea {
   resize: vertical;
 }
