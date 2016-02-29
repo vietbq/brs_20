@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <hr>
+    <ul class="breadcrumb">
+      <li><%= link_to t(:home), root_path %></li>
+      <li><%= t "book.favorite.header" %></li>
+      <li class="active"><%= t "book.favorite.title" %></li>
+    </ul>
+    <hr>
+  </div>
+  <div class="row">
+    <% @favorites.each do |favorite| %>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <%= link_to get_image(favorite.book), favorite.book %>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 favorite-title">
+          <%= link_to favorite.book.title, favorite.book %>
+        </div>
+      </div>
+    <% end %>
+    <%= will_paginate @favorites %>
+  </div>
+</div>
