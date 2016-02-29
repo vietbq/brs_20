@@ -31,3 +31,5 @@ activity:
       content: "marked favorite a book "
 users:
   users_per_page: 15
+favorite:
+  limit: 10

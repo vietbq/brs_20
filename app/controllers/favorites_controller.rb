@@ -1,5 +1,10 @@
 class FavoritesController < ApplicationController
   load_and_authorize_resource
+  before_action :load_favorites, only: [:index]
+
+  def index
+  end
+
   def create
     @book = Book.find_by id: params[:book_id]
     @book.favorites.create user: current_user
@@ -16,5 +21,11 @@ class FavoritesController < ApplicationController
       format.html{redirect_to @book}
       format.js
     end
+  end
+
+  private
+  def load_favorites
+    @favorites = current_user.favorites.paginate(page: params[:page]).
+      limit Settings.favorite.limit
   end
 end

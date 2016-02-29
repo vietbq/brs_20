@@ -67,6 +67,9 @@ en:
   messages:
     confirm: "Are you sure?"
   book:
+    favorite: 
+      header: "Favorites"
+      title: "List favorite books"
     header: "Books"
     category: "Category"
     by: "by "
