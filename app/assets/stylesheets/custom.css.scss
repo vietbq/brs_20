@@ -166,3 +166,71 @@ footer {
     border: 1px solid #ccc;
   }
 }
+
+.btn-mark-book{
+  form{
+    display: inline;
+  }
+
+  input{
+    display: inline;
+    color: white;
+  }
+
+  .btn-read{
+    display: inline;
+  }
+
+  .btn-read{
+    input:hover{
+      background-color: #5cb85c;
+      border-color: #4cae4c
+    }
+  }
+
+  .btn-reading{
+    display: inline;
+  }
+
+  .btn-reading{
+    input:hover{
+      background-color: #5bc0de;
+      border-color: #46b8da;
+    }
+  }
+
+  .btn-favorite{
+    display: inline;
+  }
+
+  .btn-favorite{
+    input:hover{
+      background-color: #f0ad4e;
+      border-color: #eea236;
+    }
+  }
+
+  .btn-marked-read{
+    display: inline;
+    input{
+      background-color: #5cb85c;
+      border-color: #4cae4c
+    }
+  }
+
+  .btn-marked-reading{
+    display: inline;
+    input{
+      background-color: #5bc0de;
+      border-color: #46b8da;
+    }
+  }
+  
+  .btn-marked-favorite{
+    display: inline;
+    input{
+      background-color: #f0ad4e;
+      border-color: #eea236;
+    }
+  }
+}

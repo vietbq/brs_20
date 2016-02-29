@@ -17,4 +17,28 @@ class Book < ActiveRecord::Base
       super & ["title", "author"]
     end
   end
+
+  def marked_reading? current_user
+    user_books.find_by user: current_user, status: 0
+  end
+
+  def marked_read? current_user
+    user_books.find_by user: current_user, status: 1
+  end
+
+  def marked_favorite? current_user
+    favorites.find_by user: current_user
+  end
+
+  def destroy_marked_book current_user
+    user_books.find_by(user: current_user).destroy
+  end
+
+  def load_marked_book current_user
+    user_books.find_by user: current_user
+  end
+
+  def load_marked_favorite current_user
+    favorites.find_by user: current_user
+  end
 end
