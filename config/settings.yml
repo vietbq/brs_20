@@ -8,6 +8,9 @@ books:
   content: 50
   detail_width: "100%"
   avatar_width: "50%"
+  marked_book:
+    reading: 0
+    read: 1
 book_form:
   description: 3
 avatar: 
