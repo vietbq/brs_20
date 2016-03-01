@@ -60,6 +60,24 @@ p {
   line-height: 1.7em;
 }
 
+/* rating */
+
+.rating {
+  margin: auto left;
+}
+
+li.rating_star {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  background: image-url("star.gif") 0 0;
+}
+
+li.rating_star.on {
+  background: image-url("star.gif") 0 16px;
+}
+
 /* header */
 
 #logo {

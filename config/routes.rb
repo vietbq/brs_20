@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :user_books, only: [:create, :destroy]
   resources :favorites, only: [:create, :destroy, :index]
+  resources :favorites, only: [:create, :destroy]
+  resources :reviews, only: [:create]
 end

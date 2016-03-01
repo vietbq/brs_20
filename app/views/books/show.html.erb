@@ -8,6 +8,19 @@
     </ul>
     <hr>
   </div>
-  <%= render "detail" %>
-  <%= render "review" %>
+  <div class="row">
+    <div class="col-md-8">
+      <%= render "detail" %>
+    </div>
+    <div class="col-md-4">
+      <div class="new_review">
+        <%= render "reviews/form_review", review: @new_review %>
+      </div>
+    </div>
+  </div>
+  <h2><%= t "user_review" %></h2>
+  <div class="reviews">
+    <%= render @reviews.order_reviews %>
+  </div>
+  <%= will_paginate @reviews %> 
 </div>

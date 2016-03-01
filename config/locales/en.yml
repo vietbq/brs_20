@@ -8,8 +8,12 @@ en:
   sign_in: "Sign in"
   sign_ip: "Sign up"
   sign_out: "Sign out"
+  user_review: "User Review"
   user:
     name: "User"
+    review:
+      success: "Review sucessfully"
+      error: "Review fail"
     edit: "Edit"
     role: "Role"
     profile: "Profile"
@@ -66,6 +70,11 @@ en:
   submit: "Submit"
   messages:
     confirm: "Are you sure?"
+  reviews:
+    created_by: "created by "
+    messages:
+      fail: "You can not write review"
+      success: "Review sucessfully"
   book:
     favorite: 
       header: "Favorites"

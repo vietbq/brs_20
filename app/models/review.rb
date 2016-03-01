@@ -6,4 +6,5 @@ class Review < ActiveRecord::Base
   belongs_to :book
   
   has_many :comments
+  scope :order_reviews, ->{order created_at: :DESC}
 end
