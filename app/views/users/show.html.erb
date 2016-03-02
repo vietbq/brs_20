@@ -12,6 +12,23 @@
           <%= @user.admin? ? t("admin.name") : t("user.name") %>
         </span>
       </h5>
+      <div class="stats">
+        <a href="#">
+          <strong id="following" class="stat">
+            <%= @user.following.count %>
+          </strong>
+          <%= t "user.followings" %>
+        </a>
+        <a href="#">
+          <strong id="followers" class="stat">
+            <%= @user.followers.count %>
+          </strong>
+          <%= t "user.followers" %>
+        </a>
+      </div>
+      <%= render "follow_form" %>
     </div>
+  </div>
+  <div class="col-md-3">
   </div>
 </div>
