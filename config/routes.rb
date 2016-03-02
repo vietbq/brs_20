@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :users
     resources :books
   end
+  resources :relationships, only: [:create, :destroy]
   resources :books
   resources :users, only: [:show]
   resources :user_books, only: [:create, :destroy]

@@ -10,6 +10,12 @@ en:
   sign_out: "Sign out"
   user_review: "User Review"
   user:
+    followings: "Followings"
+    followers: "Followers"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    history: "History"
+    all: "All users"
     name: "User"
     review:
       success: "Review sucessfully"
