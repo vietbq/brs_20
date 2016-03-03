@@ -1,0 +1,13 @@
+<% @requests.each_with_index do |request, index| %>
+  <tr> 
+    <th scope="row"><%= index + 1 %></th> 
+    <td><%= request.book_name %></td> 
+    <td><%= request.author %></td> 
+    <td><%= request.url %></td> 
+    <td><%= request.created_at %></td> 
+    <td>
+      <%= link_to t("user.request.table.action"), request, method: :delete,
+        data: {confirm: t("messages.confirm")}, class: "btn btn-danger" %>
+    </td>
+  </tr> 
+<% end %>

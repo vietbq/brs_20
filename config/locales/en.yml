@@ -28,6 +28,27 @@ en:
     password: "Password"
     password_confirm: "Password confirmation"
     email: "Email"
+    request:
+      header:
+        header: "Requests"
+        index: "List requests"
+        new: "Create request"
+      title: "Request new book"
+      book_name: "Entry book's name"
+      author: "Entry book's author"
+      content: "Entry book's content"
+      url: "Entry book's url"
+      button: "Request"
+      success: "Request new book successed"
+      error: "Request new book failed"
+      cancel: "Cancel request new book successed"
+      table:
+        index: "Index"
+        name: "Book' name"
+        author: "Author's name"
+        url: "Book's url"
+        at: "Requested at"
+        action: "Cancel"
   access_denied: "You don't have permission to do this action!"
   flash:
     user:
