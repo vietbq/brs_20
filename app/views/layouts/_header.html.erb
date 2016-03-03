@@ -10,6 +10,19 @@
             <li><%= link_to t("book.favorite.header"), favorites_path %></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <%= t "user.request.header.header" %><b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <%= link_to t("user.request.header.index"), requests_path %>
+                </li>
+                <li>
+                  <%= link_to t("user.request.header.new"), new_request_path %>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <%= current_user.username %><b class="caret"></b>
               </a>
               <ul class="dropdown-menu">

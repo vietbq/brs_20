@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    <hr>
+    <ul class="breadcrumb">
+      <li><%= link_to t(:home), root_path %></li>
+      <li><%= t "user.request.header.header" %></li>
+      <li class="active"><%= t "user.request.header.index" %></li>
+    </ul>
+    <hr>
+  </div>
+  <div class="row">
+    <table class="table table-striped"> 
+      <thead> 
+        <tr> 
+          <th><%= t "user.request.table.index" %></th>
+          <th><%= t "user.request.table.name" %></th> 
+          <th><%= t "user.request.table.author" %></th> 
+          <th><%= t "user.request.table.url" %></th>
+          <th><%= t "user.request.table.at" %></th>
+          <th><%= t "user.request.table.action" %></th> 
+        </tr> 
+      </thead> 
+      <tbody id="requests-body">
+        <%= render "request" %>
+      </tbody> 
+    </table>
+  </div>
+</div>
