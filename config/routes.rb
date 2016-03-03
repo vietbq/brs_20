@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     root "static_pages#home"
     resources :users
     resources :books
+    resources :requests, only: [:index, :show, :update]
   end
   resources :relationships, only: [:create, :destroy]
   resources :books

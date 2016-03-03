@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+    <hr>
+    <ul class="breadcrumb">
+      <li><%= link_to t(:home), root_path %></li>
+      <li><%= t "admin.name" %></li>
+      <li class="active"><%= t "admin.request.index" %></li>
+    </ul>
+    <hr>
+  </div>
+  <div class="jumbotron">
+    <div class="container">
+      <h3 class="text-center">
+        <%= t "admin.request.detail.title" %>
+        <%= link_to @request.user.username, @request.user %>
+      </h3>
+      <div class="col-md-8 col-md-offset-2">
+        <table class="table"> 
+          <tbody> 
+            <tr> 
+              <td><%= t "admin.request.table.book_name" %></td> 
+              <td><b><%= @request.book_name %></b></td> 
+              </tr> 
+            <tr>  
+              <td><%= t "admin.request.table.author" %></td> 
+              <td><b><%= @request.author %></b></td> 
+            </tr> 
+            <tr>  
+              <td><%= t "admin.request.table.content" %></td> 
+              <td><b><%= @request.content %></b></td> 
+            </tr> 
+            <tr>  
+              <td><%= t "admin.request.table.url" %></td> 
+              <td><b><%= link_to @request.url, @request.url %></b></td> 
+            </tr> 
+            <tr>  
+              <td><%= t "admin.request.table.at" %></td> 
+              <td><b><%= @request.created_at %></b></td> 
+            </tr> 
+          </tbody> 
+        </table>
+        <div class="text-center">
+          <% unless @request.status %>
+            <%= link_to t("admin.request.table.respond"),
+              admin_request_path(@request), class: "btn btn-success",
+              method: :put, data: {confirm: t("messages.confirm")} %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
