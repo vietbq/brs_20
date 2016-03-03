@@ -94,6 +94,27 @@ en:
         author: "Author"
         edit: "Edit"
         delete: "Delete"
+    request:
+      index: "List request book"
+      table: 
+        id: "ID"
+        book_name: "Book's name"
+        author: "Book's author"
+        user: "User request"
+        content: "Content"
+        at: "Created at"
+        url: "Url"
+        action: "Action"
+        detail: "Detail"
+        respond: "Respond"
+      detail:
+        title: "Request book of "
+      email:
+        hi: "Hi "
+        success: "Email was sent to user"
+        error: "Sent email failed"
+        messages: "Your book request has been considered"
+        book: "Your book's detail"
   submit: "Submit"
   messages:
     confirm: "Are you sure?"

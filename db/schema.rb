@@ -96,9 +96,9 @@ ActiveRecord::Schema.define(version: 20160225073339) do
     t.string   "author"
     t.string   "image"
     t.string   "url"
-    t.boolean  "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "status",     default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "requests", ["user_id"], name: "index_requests_on_user_id"

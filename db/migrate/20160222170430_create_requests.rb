@@ -7,7 +7,7 @@ class CreateRequests < ActiveRecord::Migration
       t.string :author
       t.string :image
       t.string :url
-      t.boolean :status
+      t.boolean :status, default: false
 
       t.timestamps null: false
     end

@@ -1,0 +1,28 @@
+<h1><%= t "admin.request.email.hi" %><%= @request.user.username %></h1>
+<b>
+  <%= t "admin.request.email.messages" %>
+</b>
+<table class="table"> 
+  <tbody> 
+    <tr> 
+      <td><%= t "admin.request.table.book_name" %>: </td> 
+      <td><b><%= @request.book_name %></b></td> 
+    </tr> 
+    <tr>  
+      <td><%= t "admin.request.table.author" %>: </td> 
+      <td><b><%= @request.author %></b></td> 
+    </tr> 
+    <tr>  
+      <td><%= t "admin.request.table.content" %>: </td> 
+      <td><b><%= @request.content %></b></td> 
+    </tr> 
+    <tr>  
+      <td><%= t "admin.request.table.url" %>: </td> 
+      <td><b><%= link_to @request.url, @request.url %></b></td> 
+    </tr> 
+    <tr>  
+      <td><%= t "admin.request.table.at" %>: </td> 
+      <td><b><%= @request.created_at %></b></td> 
+    </tr> 
+  </tbody> 
+</table>
