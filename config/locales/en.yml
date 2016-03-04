@@ -17,10 +17,17 @@ en:
     history: "History"
     all: "All users"
     name: "User"
+    cancel: "Cancel"
     review:
       success: "Review sucessfully"
       error: "Review fail"
+      close: "Close"
+      edit: "Edit review"
+      destroy: 
+        success: "Deleted review sucessfully"
+        fail: "Deleted review fail"
     edit: "Edit"
+    delete: "Delete"
     role: "Role"
     profile: "Profile"
     setting: "Setting"

@@ -1,0 +1,19 @@
+<h1><%= t "user.review.edit" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render "shared/error_messages", object: @review %>
+    <%= form_for @review, html: {class: "star_rating_form", multipart: true} do |f| %>
+      <%= f.label :rate, class: "control-label" %><br>
+      <%= f.select :rate, (0..Settings.rate.max_rate).to_a, {}, {class: "form-control"} %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control", required: true %>
+
+      <%= f.label :content %>
+      <%= f.text_area :content, class: "form-control", required: true %><br>
+
+      <%= f.submit :submit, class: "btn btn-primary" %>
+    <% end %>
+    <%= link_to t("user.cancel"), book_path(@review.book) %>
+   </div>
+</div>

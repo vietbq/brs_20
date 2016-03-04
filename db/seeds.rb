@@ -13,3 +13,10 @@ end
   Category.create!(name: name,
     content: content)
 end
+50.times do |n|
+  User.create!
+    email: "user#{n+1}@gmail.com",
+    username: "user #{n+1}",
+    password: "12345678",
+    role: 1
+end
