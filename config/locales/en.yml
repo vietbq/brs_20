@@ -26,6 +26,9 @@ en:
       destroy: 
         success: "Deleted review sucessfully"
         fail: "Deleted review fail"
+      comment:
+        success: "Comment successfully"
+        commented: " commented"
     edit: "Edit"
     delete: "Delete"
     role: "Role"
