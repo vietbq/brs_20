@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   resources :user_books, only: [:create, :destroy]
   resources :favorites, only: [:create, :destroy, :index]
   resources :favorites, only: [:create, :destroy]
-  resources :reviews, only: [:create]
+  resources :reviews
   resources :requests, except: [:show, :edit, :update]
 end

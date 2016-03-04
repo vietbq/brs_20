@@ -15,6 +15,8 @@ book_form:
   description: 3
 avatar: 
   size: 150
+rate:
+  max_rate: 5
 activity:
   trackable:
     request:

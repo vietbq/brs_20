@@ -8,5 +8,12 @@
       <%= render "books/star", rate: review.rate %>
     </div>
     <p><%= review.content %></p>
+    <p>
+      <% if can? :update, review %>
+        <%= link_to t("user.edit"), edit_review_path(review), class: "btn btn-primary" %>
+        <%= link_to t("user.delete"), review_path(review),
+          method: :delete, data: {confirm: t("messages.confirm")}, class: "btn btn-danger" %>
+      <% end %>
+    </p>
   </div>
 </div>
