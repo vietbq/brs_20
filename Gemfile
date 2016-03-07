@@ -30,6 +30,7 @@ gem "devise"
 gem "paranoia", "~> 2.0"
 gem "social-share-button"
 gem "sidekiq"
+gem "figaro"
 
 group :production do
   gem "pg"
