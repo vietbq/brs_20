@@ -160,3 +160,6 @@ en:
   add_field_search: "Add Search"
   search: "Search"
   remove: "Remove"
+  email_comment: 
+    subject: "Have new comment for your comment"
+    message: " commented into your review "
