@@ -4,15 +4,21 @@ class UsersController < ApplicationController
   def index
     @users = User.paginate page: params[:page],
       per_page: Settings.users.users_per_page
-    get_activities
   end
   
   def show
+    load_favorites
+    load_activities if @user == current_user
   end
 
   private
-  def get_activities
+  def load_activities
     @activities = PublicActivity::Activity.order("created_at desc").
       where owner: current_user
+  end
+
+  def load_favorites
+    @favorites = @user.favorites.paginate page: params[:page],
+      per_page: Settings.favorite.limit
   end
 end

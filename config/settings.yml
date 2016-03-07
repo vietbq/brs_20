@@ -34,6 +34,6 @@ activity:
 users:
   users_per_page: 15
 favorite:
-  limit: 10
+  limit: 24
 reviews:
   page: 6

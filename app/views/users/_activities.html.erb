@@ -1,3 +1,4 @@
+<h2><%= t "user.activity.title"%></h2>
 <% @activities.each do |activity| %>
   <div class="activity">
     <b><%= activity.owner.username if activity.owner %></b>
