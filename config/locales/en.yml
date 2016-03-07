@@ -59,6 +59,8 @@ en:
         url: "Book's url"
         at: "Requested at"
         action: "Cancel"
+    activity:
+      title: "Activities"
   access_denied: "You don't have permission to do this action!"
   flash:
     user:

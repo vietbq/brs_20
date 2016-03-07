@@ -32,3 +32,12 @@
   <div class="col-md-3">
   </div>
 </div>
+<br>
+<div class="row">
+  <div class="col-md-8">
+    <%= render "favorite" %>
+  </div>
+  <div class="col-md-4">
+    <%= render "activities" if @activities.present? %>
+  </div>
+</div>
