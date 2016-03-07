@@ -139,6 +139,12 @@ en:
     favorite: 
       header: "Favorites"
       title: "List favorite books"
+    reading:
+      header: "Reading books"
+      title: "List reading books"
+    read:
+      header: "Read books"
+      title: "List read books"
     header: "Books"
     category: "Category"
     by: "by "

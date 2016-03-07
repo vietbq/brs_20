@@ -4,4 +4,6 @@ class UserBook < ActiveRecord::Base
   
   belongs_to :user
   belongs_to :book
+
+  scope :load_user_books, -> status{where(status: status).order created_at: :desc}
 end
