@@ -1,29 +1,29 @@
 <div class="row">
   <div class="col-md-8">
-    <h4><strong><%= review.title %></strong></h4>
-    <p class="text-left"><em><%= t "reviews.created_by" %>
-      <%= link_to "#{review.user.username}", review.user %></em>
-    </p>
-    <div class="show-rating-review">
-      <%= render "books/star", rate: review.rate %>
+    <div class="col-md-12 paper">
+      <h4 class="display_inline"><strong><%= review.title %></strong></h4>
+      <p class="text-left display_inline"><em><%= t "reviews.created_by" %>
+        <%= link_to review.user.username, review.user %></em>
+      </p>
+      <div class="show-rating-review">
+        <%= render "books/star", rate: review.rate %>
+      </div>
+      <p><%= review.content %></p>
+      <p>
+        <% if can? :update, review %>
+          <%= link_to t("user.edit"), edit_review_path(review), class: "btn btn-primary" %>
+          <%= link_to t("user.delete"), review_path(review),
+            method: :delete, data: {confirm: t("messages.confirm")}, class: "btn btn-danger" %>
+        <% end %>
+      </p>
     </div>
-    <p><%= review.content %></p>
-    <p>
-      <% if can? :update, review %>
-        <%= link_to t("user.edit"), edit_review_path(review), class: "btn btn-primary" %>
-        <%= link_to t("user.delete"), review_path(review),
-          method: :delete, data: {confirm: t("messages.confirm")}, class: "btn btn-danger" %>
-      <% end %>
-    </p>
+    <div class="col-md-12" id="comment-review-<%= review.id %>">
+      <ul class="comments">
+        <%= render review.comments %>
+      </ul> 
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-6">
-    <div class="comments" id="comment-review-<%= review.id %>">
-      <%= render review.comments %>
-    </div> 
-  </div>
-  <div class="col-md-6">
+  <div class="col-md-4">
     <%= render "comments/comment_form", review: review %>
   </div>
 </div>

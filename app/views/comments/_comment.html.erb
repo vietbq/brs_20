@@ -1,19 +1,12 @@
-<div id="comment-<%= comment.id %>" class="comment">
-  <div class="col-sm-10">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <%= link_to comment.user.username, "#" %><%= t "user.review.comment.commented" %>
-        <span class="text-muted">
-          <em>
-            <abbr title="<%= comment.created_at %>">
-              <%= time_ago_in_words comment.created_at %>
-            </abbr>
-          </em>
-        </span>
-      </div>
-      <div class="panel-body">
-        <%= comment.content %>
-      </div>
-    </div>
-  </div>
+<div class="comments">
+  <li id="comment-<%= comment.id %>">
+    <%= link_to gravatar_for(comment.user, size: Settings.avatar.comment_size),
+      comment.user %>
+    <span class="user"><%= link_to comment.user.username, comment.user %></span>
+    <span class="content"><%= comment.content %></span>
+    <span class="timestamp">
+      <%= t "user.review.comment.commented" %>
+      <%= time_ago_in_words comment.created_at %>
+    </span>
+  </li>
 </div>
