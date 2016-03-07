@@ -5,4 +5,5 @@ class Request < ActiveRecord::Base
   belongs_to :user
 
   scope :load_requests, -> {where(status: false).order created_at: :desc}
+  scope :accepted, -> {where status: true}
 end
