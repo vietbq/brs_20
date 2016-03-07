@@ -1,0 +1,22 @@
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <% ["favorite", "reading", "read"].each do |arg| %>
+      <li role="presentation" class="<%= "active" if arg == "favorite" %>">
+        <a href="#<%= arg %>" aria-controls="profile" role="tab" data-toggle="tab">
+          <%= t "book.#{arg}.header" %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="favorite">
+      <%= render "favorite" %>
+    </div>
+    <% ["reading", "read"].each do |arg| %>
+      <div role="tabpanel" class="tab-pane" id="<%= arg %>" >
+        <%= render "user_book", user_books: instance_variable_get("@#{arg}"),
+          title: t("book.#{arg}.title") %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   
   def show
     load_favorites
+    @reading = load_user_books 0
+    @read = load_user_books 1
     load_activities if @user == current_user
   end
 
@@ -20,5 +22,9 @@ class UsersController < ApplicationController
   def load_favorites
     @favorites = @user.favorites.paginate page: params[:page],
       per_page: Settings.favorite.limit
+  end
+
+  def load_user_books status
+    current_user.user_books.load_user_books status
   end
 end

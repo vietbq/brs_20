@@ -1,0 +1,15 @@
+<div class="row">
+  <h2><%= title %></h2>
+  <div class="row">
+    <% user_books.each do |user_book| %>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <%= link_to get_image(user_book.book), user_book.book %>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 favorite-title">
+          <%= link_to user_book.book.title, user_book.book %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
