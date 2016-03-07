@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require social-share-button
 //= require_tree .
 
 var set_ratings = function(form_id, ratings){

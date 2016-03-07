@@ -10,6 +10,7 @@ en:
   sign_out: "Sign out"
   user_review: "User Review"
   user:
+    share: "Share with"
     followings: "Followings"
     followers: "Followers"
     follow: "Follow"
