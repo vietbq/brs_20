@@ -15,6 +15,7 @@ book_form:
   description: 3
 avatar: 
   size: 150
+  comment_size: 40
 rate:
   max_rate: 5
 activity:

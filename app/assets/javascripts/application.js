@@ -26,14 +26,12 @@ var set_ratings = function(form_id, ratings){
   }
 }
 
-$(function(){
-  $(".rating_star").click(function(){
-    var rating = $(this);
-    var form_id = $(this).attr("data-form-id");
-    var ratings = $(this).attr("data-rating");
+$(document).on("click", ".rating_star", function(){
+  var rating = $(this);
+  var form_id = $(this).attr("data-form-id");
+  var ratings = $(this).attr("data-rating");
 
-    set_ratings(form_id, ratings);
+  set_ratings(form_id, ratings);
 
-    $("#" + form_id).val(ratings);
-  });
+  $("#" + form_id).val(ratings);
 });
