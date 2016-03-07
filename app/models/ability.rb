@@ -10,6 +10,8 @@ class Ability
       can :create, Request
       can [:update, :destroy, :create], Review, user_id: user.id
       can :create, Comment
+      can [:create, :destroy], Favorite
+      can [:create, :destroy], UserBook
     end
   end
 end
