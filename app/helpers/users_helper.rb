@@ -11,4 +11,11 @@ module UsersHelper
     gravatar_url = "http://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
     image_tag gravatar_url, alt: user.username, class: "gravatar"
   end
+
+  def load_like_button activity
+    @class_button_like = current_user.liked?(activity) ? "liked" : ""
+    @methed_like = current_user.liked?(activity) ? :delete : :post
+    @like = current_user.liked?(activity) ? 
+      current_user.liked?(activity) : current_user.likes.build
+  end
 end

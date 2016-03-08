@@ -1,0 +1,6 @@
+<% load_like_button activity %>
+<%= form_for(@like, method: @methed_like, remote: true) do |f| %>
+  <%= hidden_field_tag :activity_id, activity.id %>
+  <%= hidden_field_tag :user_id, activity.owner.id %>
+  <%= f.submit "Like", class: @class_button_like %>
+<% end %>

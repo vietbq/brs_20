@@ -25,5 +25,6 @@ config/environments/*.local.yml
 .DS_Store
 /.idea
 /dump.rdb
+/.byebug_history
 # Ignore application configuration
 /config/application.yml

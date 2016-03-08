@@ -1,8 +1,11 @@
 <h2><%= t "user.activity.title"%></h2>
 <% @activities.each do |activity| %>
-  <div class="activity">
+  <div class="activity col-md-11 col-sm-11 col-xs-11">
     <b><%= activity.owner.username if activity.owner %></b>
     <%= get_activity_trackable_content activity %>
     <em><%= time_ago_in_words activity.created_at %></em>
+  </div>
+  <div class="col-md-1 col-sm-1 col-xs-1">
+    <%= render "users/like", activity: activity %>
   </div>
 <% end %>

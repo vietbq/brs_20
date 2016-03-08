@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   resources :reviews
   resources :comments
   resources :requests, except: [:show, :edit, :update]
+  resources :likes, only: [:create, :destroy]
 end

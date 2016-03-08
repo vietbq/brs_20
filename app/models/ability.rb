@@ -12,6 +12,7 @@ class Ability
       can :create, Comment
       can [:create, :destroy], Favorite
       can [:create, :destroy], UserBook
+      can [:create, :destroy], Like
     end
   end
 end
