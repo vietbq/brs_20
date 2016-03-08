@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   def create
     @comment = current_user.comments.build comment_params
     if @comment.save
-      SendEmailsWorker.perform_async @comment.id
+      SendEmailsWorker.perform_async @comment.id if Rails.env.development?
       flash[:success] = t "user.review.comment.success"
       respond_to do |format|
         format.js
