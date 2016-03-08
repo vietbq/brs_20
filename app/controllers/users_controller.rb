@@ -10,13 +10,13 @@ class UsersController < ApplicationController
     load_favorites
     @reading = load_user_books 0
     @read = load_user_books 1
-    load_activities if @user == current_user
+    load_activities
   end
 
   private
   def load_activities
     @activities = PublicActivity::Activity.order("created_at desc").
-      where owner: current_user
+      where owner: @user
   end
 
   def load_favorites

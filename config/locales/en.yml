@@ -91,6 +91,7 @@ en:
         delete: "Delete"
       search: "Search"
     book:
+      list: "List Books"
       create_book: "Create new book"
     books:
       updated_success: "Book updated sucessfully"
