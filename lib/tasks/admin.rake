@@ -7,6 +7,11 @@ namespace :admin do
       password: "12345678",
       password_confirmation: "12345678",
       role: User.roles[:admin]
+    User.create username: "Admin_VietBui",
+      email: "buiquocviet1993@gmail.com",
+      password: "12345678",
+      password_confirmation: "12345678",
+      role: User.roles[:admin]
     User.create username: "Admin",
       email: "admin@gmail.com",
       password: "12345678",
