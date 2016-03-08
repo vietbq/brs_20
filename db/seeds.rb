@@ -14,8 +14,7 @@ end
     content: content)
 end
 50.times do |n|
-  User.create!
-    email: "user#{n+1}@gmail.com",
+  User.create! email: "user#{n+1}@gmail.com",
     username: "user #{n+1}",
     password: "12345678",
     role: 1
